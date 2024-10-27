@@ -9,8 +9,8 @@ ws.on("connection", (connection, request) => {
   console.log("We have a connection");
 
   connection.on("message", (data) => {
-    console.log("data", JSON.parse(data));
-    const dataFromClient = JSON.parse(data);
+    console.log("data", JSON.parse(data.toString()));
+    const dataFromClient = JSON.parse(data.toString());
     const requestType = dataFromClient.type;
     const requestData = JSON.parse(dataFromClient.data);
 
