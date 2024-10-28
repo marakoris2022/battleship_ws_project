@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts",
+  "exec": "tsc --noEmit && node --no-warnings=ExperimentalWarning --loader ts-node/esm ./index.ts",
+  "ignore": ["node_modules"]
+}
